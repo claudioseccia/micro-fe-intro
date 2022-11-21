@@ -72,3 +72,13 @@ const App = () => (
 ...
 
 RESTART BOTH PROJECTS WITH: npm start
+*********************************************************************************************************
+ Why Micro-Frontends?
+
+it follows the principles of atomic design
+atomicdesign.com
+*********************************************************************************************************
+Lazy loading: apply React.lazy importing the components (Header and Footer) and Suspense wrapping them
+
+shared setting set to react->singleton:true allows lazy loading: webpack manages the sharing of the libraries
+*********************************************************************************************************
