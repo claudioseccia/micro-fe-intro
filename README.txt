@@ -82,3 +82,16 @@ Lazy loading: apply React.lazy importing the components (Header and Footer) and 
 
 shared setting set to react->singleton:true allows lazy loading: webpack manages the sharing of the libraries
 *********************************************************************************************************
+Error Handling
+ex. from pdp package run: yarn build
+to serve in port 3001 do:
+PORT=3001 npx servor 
+(it might require to install servor) - servor just serves static files
+running the home application on port 3000 everything is still working the same. Built files of pdp application are still there.
+
+NOTE: not to break any functionality please keep the same contract between shared component. 
+ex. if we add an app.name inside Header, we then need to update them both in Home AND PDP pages, ex:
+<Header app={{name:"Home"}} /> <-- in Home > App.js
+<Header app={{name:"PDP"}} />  <-- in PDP > App.js
+
+WHAT IF SOMEONE FORGETS TO DO SO? Use ErrorBoundary

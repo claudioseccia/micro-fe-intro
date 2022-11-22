@@ -1,22 +1,21 @@
-import React, {Suspense, useState} from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
 import "./index.scss";
 
-const Header = React.lazy(()=>import("home/Header"));
+import Header from "home/Header";
 import Footer from "home/Footer";
-const App = () => {
-  const [showHeader, setShowHeader] = useState(false);
-  return (<div className="mt-10 text-3xl mx-auto max-w-6xl">
-            {showHeader && 
-            <Suspense fallback={<div>Loading...</div>}>
+import SafeComponent from "./safeComponent";
+
+//try to use Header without app={{name:"PDP"}} tolet SafeComponent to run
+// to show the SafeComponent without inmporting it
+const App = () => (
+          <div className="mt-10 text-3xl mx-auto max-w-6xl">
+            <SafeComponent>
               <Header />
-            </Suspense>}
+            </SafeComponent>
             <div className="my-10">PDP Page Content</div>
-            <button className="text-3xl p-5" onClick={()=>setShowHeader(!showHeader)}>Show the Header</button>
             <Footer />
           </div>);
-}
-
 
 ReactDOM.render(<App />, document.getElementById("app"));
