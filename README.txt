@@ -95,3 +95,20 @@ ex. if we add an app.name inside Header, we then need to update them both in Hom
 <Header app={{name:"PDP"}} />  <-- in PDP > App.js
 
 WHAT IF SOMEONE FORGETS TO DO SO? Use ErrorBoundary
+*********************************************************************************************************
+npx create-mf-app
+name of the app: server
+backend type application with nestjs
+
+create a products controller
+yarn install
+yarn start:dev
+
+at this point we should get two routes:
+http://localhost:8080/products <-- list of all products
+http://localhost:8080/products/1 <-- one single product 
+
+share the products.js file in the webpack config
+
+do:
+yarn add react-router-dom
