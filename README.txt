@@ -112,3 +112,35 @@ share the products.js file in the webpack config
 
 do:
 yarn add react-router-dom
+
+create the routing
+create cart get and delete endpoints in ./server
+
+npm create-mf-app
+name of the app: cart
+application
+react
+javascript
+tailwind
+
+rxjs -> set of reactive objects and functions to create observable streams
+create a behaviour subject wich will contain a JWT 
+and another one that is going to hold our cart
+the first one will subscribe the second one to get a Cart
+
+edit webpack.config and 
+add these entries to remote:
+remotes: {
+        home: "home@http://localhost:3000/remoteEntry.js",
+        pdp: "pdp@http://localhost:3001/remoteEntry.js",
+        cart: "cart@http://localhost:3002/remoteEntry.js",
+      },
+add those entries to exposes:
+exposes: {
+        "./cart": "./src/cart.js",
+        "./Login": "./src/Login.jsx",
+        "./MiniCart": "./src/MiniCart.jsx",
+        "./CartContent": "./src/CartContent.jsx",
+      },
+
+CSS IS NOT SHARABLE IN MODULE FEDERATION, IT MUST BE EITHER JSS, JAVASCRIPT ANYWAY

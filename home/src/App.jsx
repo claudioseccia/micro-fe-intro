@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "remixicon/fonts/remixicon.css";
 
 import "./index.scss";
 import Header from "./Header";
@@ -8,7 +9,7 @@ import HomeContent from "./HomeContent";
 
 const App = () => (
   <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <Header app={{name:"home"}} />
+    <Header />
     <div className="my-10">
       <HomeContent />
     </div>
