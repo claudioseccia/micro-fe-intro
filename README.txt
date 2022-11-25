@@ -152,3 +152,14 @@ yarn add jest-environment-jsdom -D
 
 create a manual mock into a folder __mocks__ with an empty function export like:
 export default {}
+
+//E2E TESTING:
+yarn add cypress --dev
+install cypress recorder on chrome browser
+
+use cypress recorder to record: login, clear cart, add to cart.
+run:
+yarn run cypress open
+create new test: e2e_spec.js
+copy all the generated tests in cypress recorder to e2e_spec.js
+run in the panel the newly generated 
