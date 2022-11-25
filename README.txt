@@ -144,3 +144,11 @@ exposes: {
       },
 
 CSS IS NOT SHARABLE IN MODULE FEDERATION, IT MUST BE EITHER JSS, JAVASCRIPT ANYWAY
+
+
+//UNIT TESTING:
+yarn add @testing-library/react-hooks jest -D
+yarn add jest-environment-jsdom -D
+
+create a manual mock into a folder __mocks__ with an empty function export like:
+export default {}
